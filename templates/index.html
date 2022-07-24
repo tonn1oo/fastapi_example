@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+        {% if books %}
+       <h1>Library</h1>
+        <ul>
+            {% for book in books %}
+            <hr>
+            <li>{{ book.bid }}</li>
+            <li>{{ book.name }}</li>
+            <li>{{ book.author }}</li>
+            <li>{{ book.year }}</li>
+            <li>{{ book.count }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if book %}
+            <b>Book:</b>
+            <div>Name: {{ book.name }}</div>
+            <div>Author: {{ book.author }}</div>
+            <div>Year: {{ book.year }}</div>
+            <div>Count: {{ book.count }}</div>
+        {% endif %}
+
+</body>
+</html>
